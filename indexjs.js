@@ -1,11 +1,11 @@
-$(document).ready(function ($) {
+$.fn.slider = $(document).ready(function ($) {
 
     setInterval(function() {
-        $('#slider ul').animate({
+        $('#slider1 ul').animate({
             left: + slideWidth
         }, 500, function () {
-            $('#slider ul li:first-child').appendTo('#slider ul');
-            $('#slider ul').css('left', '');
+            $('#slider1 ul li:first-child').appendTo('#slider1 ul');
+            $('#slider1 ul').css('left', '');
         });
 
         $(".h-carousel-items").animate({left: "-222px"}, 200);
@@ -16,23 +16,23 @@ $(document).ready(function ($) {
 }, 300);
 },  8000);
 
-    var slideCount = $('#slider ul li').length;
-    var slideWidth = $('#slider ul li').width();
-    var slideHeight = $('#slider ul li').height();
+    var slideCount = $('#slider1 ul li').length;
+    var slideWidth = $('#slider1 ul li').width();
+    var slideHeight = $('#slider1 ul li').height();
     var sliderUlWidth = slideCount * slideWidth;
 
-    $('#slider').css({ width: slideWidth, height: slideHeight });
+    $('#slider1').css({ width: slideWidth, height: slideHeight });
 
-    $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+    $('#slider1 ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
 
-    $('#slider ul li:last-child').prependTo('#slider ul');
+    $('#slider1 ul li:last-child').prependTo('#slider1 ul');
 
     function moveLeft() {
-        $('#slider ul').animate({
+        $('#slider1 ul').animate({
             left: - slideWidth
         }, 500, function () {
-            $('#slider ul li:last-child').prependTo('#slider ul');
-            $('#slider ul').css('left', '');
+            $('#slider1 ul li:last-child').prependTo('#slider1 ul');
+            $('#slider1 ul').css('left', '');
         });
 
         $(".h-carousel-items .b-carousel-block").eq(-1).clone().prependTo(".h-carousel-items");
@@ -42,11 +42,11 @@ $(document).ready(function ($) {
     };
 
     function moveRight() {
-        $('#slider ul').animate({
+        $('#slider1 ul').animate({
             left: + slideWidth
         }, 500, function () {
-            $('#slider ul li:first-child').appendTo('#slider ul');
-            $('#slider ul').css('left', '');
+            $('#slider1 ul li:first-child').appendTo('#slider1 ul');
+            $('#slider1 ul').css('left', '');
         });
 
         $(".h-carousel-items").animate({left: "-222px"}, 200);
