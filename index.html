@@ -5,9 +5,11 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="indexcss.css" />
     <script src="jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="indexjs.js"> </script>
+    <script type="text/javascript" src="index.coffee"> </script>
     <script type="text/javascript">
-        $('#slider').slider();
+        $(document).ready(function(){
+            $('.slider').slider();
+        });
     </script>
 </head>
 <body>
