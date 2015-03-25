@@ -60,14 +60,6 @@
 
     };
 
-     $('.b-carousel-block:first-child').click(function () {
-     $('#slider1 ul:first-child').animate({
-         left: + slideWidth
-     }, 500, function () {
-         $('#slider1 ul li:first-child').appendTo('#slider1 ul:nth-child(2)');
-         $('#slider1 ul:first-child').css('left', '');
-     });
-
     $('a.control_prev').click(function () {
         moveLeft();
     });
